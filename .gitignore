@@ -1,0 +1,31 @@
+# CMake build directories
+build/
+bin/
+lib/
+out/
+
+# Executables and compiled objects
+*.exe
+*.out
+*.app
+*.o
+*.obj
+*.dll
+*.so
+*.a
+*.lib
+
+# IDE specific files
+.vscode/
+.idea/
+*.sln
+*.vcxproj
+*.vcxproj.user
+*.vcxproj.filters
+
+# Temporary and cache files
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake
+*.dir/
