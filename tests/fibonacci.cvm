@@ -1,0 +1,10 @@
+let x = 0;
+let y = 1;
+let i = 0;
+while (i < 10) {
+    print x;
+    let temp = x + y;
+    x = y;
+    y = temp;
+    i = i + 1;
+}
