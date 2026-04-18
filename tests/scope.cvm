@@ -1,0 +1,11 @@
+let x = 10;
+{
+    let x = 20;
+    print x; 
+}
+print x;
+
+let y = (1 == 1) || (1 == 0);
+let z = (1 == 0) && (1 == 1);
+print y;
+print z;
