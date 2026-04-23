@@ -2,7 +2,7 @@
 
 **CVM++** is a high-performance, stack-based Virtual Machine and Compiler engineered entirely from scratch in modern C++. It's designed to be a robust, memory-safe, and blazingly fast execution engine.
 
-Featuring strict architectural protections, CVM++ executes custom typed instructions securely—handling lexical block scoping, runtime boundary mitigations, constant folding optimizations, and standard execution operations smoothly.
+Featuring strict architectural protections, CVM++ executes custom typed instructions securely-handling lexical block scoping, runtime boundary mitigations, constant folding optimizations, and standard execution operations smoothly.
 
 ## Key Features
 
@@ -26,6 +26,14 @@ Featuring strict architectural protections, CVM++ executes custom typed instruct
 
 *   A C++14 (or newer) compatible compiler (GCC, Clang, or MSVC).
 *   CMake 3.10+
+
+### One-Command Build and Run (No CMake)
+
+Use this single line in environments where `cmake` is unavailable:
+
+```bash
+g++ -std=c++14 -Wall -Wextra -O2 src/main.cpp src/lexer.cpp src/ast.cpp src/parser.cpp src/compiler.cpp src/vm.cpp -o cvm && ./cvm tests/fibonacci.cvm
+```
 
 ### Build Instructions
 
@@ -107,7 +115,7 @@ while (x < limit) {
 ## Architecture Layers
 
 ```text
-[ Lexer ] ➔  [ Parser (AST) ]   ➔    [ Compiler ]    ➔     [ Virtual Machine ]
+[ Lexer ] ->  [ Parser (AST) ]   ->    [ Compiler ]    ->     [ Virtual Machine ]
   (Text)       (Syntax Tree)      (Bytecode Chunks)        (Stack Execution)
 ```
 
