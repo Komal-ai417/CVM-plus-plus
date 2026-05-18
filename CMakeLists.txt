@@ -9,7 +9,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_CXX_FLAGS_RELEASE "-O2 -DNDEBUG")
 
 # ============================================================
-# Build configuration for the CVM++ executable
+# Build configuration for the CVM++ executable 
 # ============================================================
 add_executable(cvm
     src/main.cpp
