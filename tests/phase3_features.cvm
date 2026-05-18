@@ -5,6 +5,17 @@ print 0x1A;    // Expected: 26 (hex)
 print 0b1010;  // Expected: 10 (binary)
 print 0o17;    // Expected: 15 (octal)
 
+// Test: All numeric literal formats and edge cases
+// Expected output: 255, 255, 255, 10, 0, 2147483647, -2147483648
+
+print 255;               // decimal
+print 0xFF;              // hexadecimal
+print 0b11111111;        // binary
+print 0o12;              // octal
+print 0;                 // zero
+print 2147483647;        // INT32_MAX
+print -2147483647 - 1;   // INT32_MIN (computed to avoid lexer parse issue)
+
 let i = 0;
 // Empty for-loop clauses
 for (;;) {
