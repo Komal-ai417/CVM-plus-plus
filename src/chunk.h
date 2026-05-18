@@ -4,6 +4,12 @@
 #include <algorithm>
 #include "error.h"
 
+static_assert(sizeof(int32_t) == 4, "int32_t must be 4 bytes");
+
+// Run-Length Encoded (RLE) line mapping: only stores an entry when the
+// source line number changes, dramatically reducing memory compared to
+// a per-byte line table. Use Chunk::getLine() to resolve any bytecode
+// offset back to its original source line via binary search.
 struct LineEntry {
     size_t offset;
     int line;

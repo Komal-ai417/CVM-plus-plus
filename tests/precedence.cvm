@@ -1,0 +1,20 @@
+// Test: Operator precedence correctness
+// Expected output: 14, 5, 8, 1, 3, 1
+
+// Arithmetic: * binds tighter than +
+print 2 + 3 * 4;        // 14
+
+// Shift vs arithmetic: + binds tighter than <<
+print 1 << 2 + 1;       // 8  (1 << (2+1) = 1 << 3 = 8)
+
+// Comparison vs bitwise: == binds tighter than ||
+print 1 == 2 || 3 == 3;  // 1 (short-circuit, normalizes to 1)
+
+// Unary vs arithmetic: - binds tighter than *
+print -3 * -1;           // 3
+
+// Logical vs bitwise: ! binds tighter than &
+print !0 & 1;            // 1
+
+// Unary ! vs comparison: ! binds tighter than <
+print !0 < 2;            // 1 ((1) < 2 = 1)

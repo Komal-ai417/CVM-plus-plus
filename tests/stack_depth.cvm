@@ -1,0 +1,10 @@
+// Test: Near stack boundary — heavy nested expression evaluation
+// Pushes many intermediate values without triggering overflow
+
+let result = 0;
+let i = 0;
+while (i < 500) {
+    result = result + i * i + i - i;
+    i = i + 1;
+}
+print result; // 41674167 = sum of i^2 for i=0..499... actually sum of i for i=0..499 = 124750

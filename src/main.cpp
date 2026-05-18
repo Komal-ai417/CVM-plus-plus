@@ -7,6 +7,14 @@
 #include <fstream>
 #include <sstream>
 
+// ============================================================
+// CVM++ Entry Point
+// Supports three modes:
+//   1. REPL   — Launch without arguments for interactive session
+//   2. Script — Pass a .cvm file path to compile and execute
+//   3. Dump   — Use --dump flag to disassemble bytecode without running
+// ============================================================
+
 static constexpr const char* CVM_VERSION = "1.1.0";
 
 struct RunOptions {

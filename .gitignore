@@ -14,6 +14,9 @@ out/
 *.so
 *.a
 *.lib
+.DS_Store
+._*
+Thumbs.db
 
 # IDE specific files
 .vscode/
@@ -23,9 +26,18 @@ out/
 *.vcxproj.user
 *.vcxproj.filters
 
+# Editor swap/backup files
+*.swp
+*.swo
+*~
+*.orig
+
 # Temporary and cache files
 CMakeCache.txt
 CMakeFiles/
 Makefile
 cmake_install.cmake
 *.dir/
+
+# CMake dependency files
+*.d

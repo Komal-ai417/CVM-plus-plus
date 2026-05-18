@@ -5,6 +5,20 @@ let x = 10;
 }
 print x;
 
+// Test: Deep nested scoping with variable shadowing
+// Expected output: 3, 2, 1
+
+let a = 1;
+{
+    let a = 2;
+    {
+        let a = 3;
+        print a;    // 3
+    }
+    print a;        // 2
+}
+print a;            // 1
+
 let y = (1 == 1) || (1 == 0);
 let z = (1 == 0) && (1 == 1);
 print y;
