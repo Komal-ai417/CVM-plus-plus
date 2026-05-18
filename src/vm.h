@@ -4,6 +4,8 @@
 #include <array>
 #include <vector>
 
+static_assert(sizeof(int32_t) == 4, "int32_t must be 4 bytes");
+
 class VM {
 public:
     static constexpr int32_t MAX_VARIABLES = 65536;
