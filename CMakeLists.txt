@@ -4,6 +4,7 @@ project(CVM_PlusPlus VERSION 1.1.0)
 # Target C++17
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
 # Build the main executable
 add_executable(cvm
