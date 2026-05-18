@@ -1,5 +1,6 @@
 #include "lexer.h"
 #include "error.h"
+#include <vector>
 #include <cctype>
 #include <unordered_map>
 #include <string>
